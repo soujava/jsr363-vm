@@ -16,7 +16,7 @@ Save
 Save the build to a image so you can re-run it after
 
 ```
-$ sudo docker run -it --name jsr363vm soujava/jsr363vm /bin/bash
+$ docker commit jsr363vm soujava/jsr363vm
 ```
 
 Check Java
@@ -24,12 +24,11 @@ Check Java
 To check if the correct java version have been installed, run the following command
 
 ```
-$ sudo docker run -it --name jsr363vm soujava/jsr363vm java -version
+$ docker run soujava/jsr363vm java -version
 ```
 
 Output
 -------
-
 ```
 openjdk version "1.9.0-internal"
 OpenJDK Runtime Environment (build 1.9.0-internal-_2015_06_04_06_46-b00)
@@ -41,16 +40,21 @@ This commands will run all the tests for the API
 
 Execute unit-ri tests
 ----------------------
-
 ```
-$ sudo docker run -it --name jsr363vm soujava/jsr363vm cd ~/unit-ri && mvn test
+$ docker run soujava/jsr363vm cd ~/unit-ri && mvn test
 ```
 
 Execute unit-api tests
 -----------------------
-
 ```
-$ sudo docker run -it --name jsr363vm soujava/jsr363vm cd ~/unit-api && mvn test
+$ docker run soujava/jsr363vm cd ~/unit-api && mvn test
+```
+
+
+Execute other commands
+-----------------
+```
+$ docker run -it --name jsr371vm soujava/jsr371vm /bin/bash
 ```
 
 
