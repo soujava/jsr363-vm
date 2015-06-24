@@ -60,7 +60,7 @@ RUN \
 #download jsr-363
 RUN \
   cd ~/ && \
-  /usr/bin/git clone https://github.com/unitsofmeasurement/unit-ri \
+  /usr/bin/git clone https://github.com/unitsofmeasurement/unit-ri && \
   /usr/bin/git clone https://github.com/unitsofmeasurement/unit-api
 
 #mvn install unit-ri
