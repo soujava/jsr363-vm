@@ -52,3 +52,12 @@ Execute unit-api tests
 ```
 $ sudo docker run -it --name jsr363vm soujava/jsr363vm cd ~/unit-api && mvn test
 ```
+
+
+License
+=======
+The GNU General Public License (GPL)
+
+Author
+=======
+Thomas Modeneis @thomasmodeneis
